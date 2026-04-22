@@ -146,6 +146,21 @@ face_landmark_init() {
     popd
 }
 
+pose_landmark_init() {
+    pose_landmark_dir="${model_path}/pose_landmark"
+    mkdir -p "${pose_landmark_dir}"
+    pushd "${pose_landmark_dir}"
+
+    model_urls=("https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_heavy/float16/1/pose_landmarker_heavy.task"
+    )
+
+    for url in "${model_urls[@]}"; do
+      curl -sLO "${url}"
+    done
+
+    popd
+}
+
 
 audio_classification_init() {
   audio_classification_dir="${model_path}/audio_classification"
@@ -203,6 +218,7 @@ image_segmentation_init
 image_embedding_init
 face_detection_init
 face_landmark_init
+pose_landmark_init
 audio_classification_init
 text_classification_init
 text_embedding_init

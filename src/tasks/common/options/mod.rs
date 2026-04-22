@@ -15,11 +15,16 @@ mod hand_landmark_options;
 #[macro_use]
 #[cfg(feature = "vision")]
 mod face_landmark_options;
+#[macro_use]
+#[cfg(feature = "vision")]
+mod pose_landmark_options;
 
 pub(crate) use base_task_options::BaseTaskOptions;
 pub(crate) use classification_options::ClassificationOptions;
 pub(crate) use embedding_options::EmbeddingOptions;
 #[cfg(feature = "vision")]
+pub(crate) use face_landmark_options::FaceLandmarkOptions;
+#[cfg(feature = "vision")]
 pub(crate) use hand_landmark_options::HandLandmarkOptions;
 #[cfg(feature = "vision")]
-pub(crate) use face_landmark_options::FaceLandmarkOptions;
+pub(crate) use pose_landmark_options::PoseLandmarkOptions;

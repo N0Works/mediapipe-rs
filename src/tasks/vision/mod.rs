@@ -7,6 +7,7 @@ mod image_classification;
 mod image_embedding;
 mod image_segmentation;
 mod object_detection;
+mod pose_landmark;
 
 pub use face_detection::{FaceDetector, FaceDetectorBuilder, FaceDetectorSession};
 pub use face_landmark::{
@@ -24,6 +25,9 @@ pub use image_classification::{ImageClassifier, ImageClassifierBuilder, ImageCla
 pub use image_embedding::{ImageEmbedder, ImageEmbedderBuilder, ImageEmbedderSession};
 pub use image_segmentation::{ImageSegmenter, ImageSegmenterBuilder, ImageSegmenterSession};
 pub use object_detection::{ObjectDetector, ObjectDetectorBuilder, ObjectDetectorSession};
+pub use pose_landmark::{
+    PoseLandmark, PoseLandmarker, PoseLandmarkerBuilder, PoseLandmarkerSession,
+};
 
 /// Re-export some task results types
 pub mod results {
@@ -31,6 +35,7 @@ pub mod results {
     pub use super::gesture_recognition::{GestureRecognizerResult, GestureRecognizerResults};
     pub use super::hand_landmark::{HandLandmarkResult, HandLandmarkResults};
     pub use super::image_segmentation::ImageSegmentationResult;
+    pub use super::pose_landmark::{PoseLandmarkResult, PoseLandmarkResults};
 }
 
 /// Task session trait to process the video stream data

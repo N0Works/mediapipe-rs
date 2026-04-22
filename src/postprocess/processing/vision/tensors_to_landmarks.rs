@@ -67,6 +67,16 @@ impl TensorsToLandmarks {
     }
 
     #[inline(always)]
+    pub fn set_visibility_score_sigmoid(&mut self, visibility_score_sigmoid: bool) {
+        self.options.visibility_score_sigmoid = visibility_score_sigmoid;
+    }
+
+    #[inline(always)]
+    pub fn set_presence_score_sigmoid(&mut self, presence_score_sigmoid: bool) {
+        self.options.presence_score_sigmoid = presence_score_sigmoid;
+    }
+
+    #[inline(always)]
     pub fn set_image_size(&mut self, w: u32, h: u32) {
         self.options.img_size = Some((w as f32, h as f32))
     }

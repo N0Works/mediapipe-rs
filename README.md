@@ -34,7 +34,7 @@
 * [x] Image Embedding
 * [x] Face Detection
 * [x] Face Landmark Detection
-* [ ] Pose Landmark Detection
+* [x] Pose Landmark Detection
 * [x] Audio Classification
 * [x] Text Classification
 * [x] Text Embedding
@@ -87,6 +87,7 @@ Every task has three types: ```XxxBuilder```, ```Xxx```, ```XxxSession```. (``Xx
     * object detection: `ObjectDetectorBuilder` -> `ObjectDetector` -> `ObjectDetectorSession`
     * face detection: `FaceDetectorBuilder` -> `FaceDetector` -> `FaceDetectorSession`
     * face landmark detection: `FaceLandmarkerBuilder` -> `FaceLandmarker` -> `FaceLandmarkerSession`
+    * pose landmark detection: `PoseLandmarkerBuilder` -> `PoseLandmarker` -> `PoseLandmarkerSession`
 * audio:
     * audio classification: `AudioClassifierBuilder` -> `AudioClassifier` -> `AudioClassifierSession`
 * text:
