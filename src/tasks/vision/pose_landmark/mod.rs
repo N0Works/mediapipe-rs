@@ -206,10 +206,10 @@ impl<'model> PoseLandmarkerSession<'model> {
 
             let segmentation_mask =
                 if let Some(ref mut tensors_to_segmentation) = self.tensors_to_segmentation {
-                    self.execution_ctx.get_output(
-                        self.pose_landmarker.segmentation_buf_index,
-                        tensors_to_segmentation.tenor_buffer(),
-                    )?;
+                self.execution_ctx.get_output(
+                    self.pose_landmarker.segmentation_buf_index,
+                    tensors_to_segmentation.tensor_buffer(),
+                )?;
                     Some(resize_confidence_mask(
                         tensors_to_segmentation
                             .confidence_masks()
