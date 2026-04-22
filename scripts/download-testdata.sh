@@ -28,6 +28,7 @@ download_img_data() {
         "https://storage.googleapis.com/mediapipe-assets/burger.jpg"
         "https://storage.googleapis.com/mediapipe-assets/burger_crop.jpg"
         "https://storage.googleapis.com/mediapipe-tasks/hand_landmarker/woman_hands.jpg"
+        "https://storage.googleapis.com/mediapipe-assets/full_body.jpg"
   )
 
   for url in "${urls[@]}"; do

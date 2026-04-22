@@ -38,7 +38,7 @@ impl TensorsToSegmentation {
     }
 
     #[inline(always)]
-    pub(crate) fn tenor_buffer(&mut self) -> &mut [u8] {
+    pub(crate) fn tensor_buffer(&mut self) -> &mut [u8] {
         self.tensor_buffer.data_buffer.as_mut_slice()
     }
 

@@ -55,6 +55,7 @@
 //!   * image embedding: [`ImageEmbedderBuilder`] -> [`ImageEmbedder`] -> [`ImageEmbedderSession`]
 //!   * image segmentation: [`ImageSegmenterBuilder`] -> [`ImageSegmenter`] -> [`ImageSegmenterSession`]
 //!   * object detection: [`ObjectDetectorBuilder`] -> [`ObjectDetector`] -> [`ObjectDetectorSession`]
+//!   * pose landmark detection: [`PoseLandmarkerBuilder`] -> [`PoseLandmarker`] -> [`PoseLandmarkerSession`]
 //! * audio:
 //!   * audio classification: [`AudioClassifierBuilder`] -> [`AudioClassifier`] -> [`AudioClassifierSession`]
 //! * text:

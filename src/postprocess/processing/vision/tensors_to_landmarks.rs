@@ -66,6 +66,20 @@ impl TensorsToLandmarks {
         self.options.normalize_z = normalize_z;
     }
 
+    /// Set whether the optional visibility score should be passed through a sigmoid
+    /// activation before being stored on each landmark.
+    #[inline(always)]
+    pub fn set_visibility_score_sigmoid(&mut self, visibility_score_sigmoid: bool) {
+        self.options.visibility_score_sigmoid = visibility_score_sigmoid;
+    }
+
+    /// Set whether the optional presence score should be passed through a sigmoid
+    /// activation before being stored on each landmark.
+    #[inline(always)]
+    pub fn set_presence_score_sigmoid(&mut self, presence_score_sigmoid: bool) {
+        self.options.presence_score_sigmoid = presence_score_sigmoid;
+    }
+
     #[inline(always)]
     pub fn set_image_size(&mut self, w: u32, h: u32) {
         self.options.img_size = Some((w as f32, h as f32))
